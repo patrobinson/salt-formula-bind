@@ -16,8 +16,6 @@ $TTL {{ zone.get('ttl', '86400') }}
 {%- endfor %}
 {%- endfor %}
 
-{%- endfor %}
-
 {#-
   vim: syntax=jinja
 #}
