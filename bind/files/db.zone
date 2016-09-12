@@ -14,7 +14,7 @@ $TTL {{ zone.get('ttl', '86400') }}
 {%- for record in zone.get('records', []) %}
 {%- set type = record.get('type', 'A') %}
 {%- set value = record.get('value') %}
-{{ record.get('name', '@') }} {{ record.get('ttl', '') }} {{ type }} {% if type in ['TXT', 'SPF'] %}"{{ value }}"{% else %}{{ value }}{% endif %}
+{{ record.get('name', '@') }} IN {{ type }} {% if type in ['TXT', 'SPF'] %}"{{ value }}"{% else %}{{ value }}{% endif %}
 {%- endfor %}
 {%- endfor %}
 
